@@ -32,48 +32,37 @@
 </body>
 
 <head>
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" type="text/css" href="styles.css"> 
 </head>
 <body>
     <div class="container">
-        <h2 class="section-title">Login to your account!</h2>
+        <h2 class="section-title">Sign Up!</h2>
         <div class="login-form">
-            <input type="text" placeholder="Username" id="username" class="input-field">
+            <input type="text" placeholder="Enter Name and Surname" id="name" class="input-field">
+            <input type="text" placeholder="Enter email" id="email" class="input-field">
             <input type="password" placeholder="Password" id="password" class="input-field">
             <div class="buttons">
-                <button class="login-btn" id="login-btn">Login</button>
-                <span class="or-text">or</span>
                 <button class="signup-btn" id="signup-btn">Sign Up</button>
             </div>
-            <p id="error-message" class="error-message"></p>
-            <p id="success-message" class="success-message"></p>
         </div>
     </div>
 
     <script>
-        document.getElementById("login-btn").addEventListener("click", function() {
-
-            var username = document.getElementById("username").value;
+        document.getElementById("signup-btn").addEventListener("click", function() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
 
-            var storedUsername = localStorage.getItem("username");
-            var storedPassword = localStorage.getItem("password");
-
-            
-            if (username === storedUsername && password === storedPassword) {
-                document.getElementById("success-message").textContent = "Sign in successful! Welcome back.";
-                //window.location.href = "person.html";
+            if (localStorage.getItem(email)) {
+                alert("User with this email already exists. Please choose a different email.");
             } else {
-                
-                document.getElementById("error-message").textContent = "Invalid username or password.";
-            }
-        });
 
-        document.getElementById("signup-btn").addEventListener("click", function() {
-            window.location.href = "person_signup.html";
+                localStorage.setItem(email, JSON.stringify({ name: name, password: password }));
+                window.location.href = "person.html";
+            }
         });
     </script>
 </body>
 
-</html></div>
+</html>

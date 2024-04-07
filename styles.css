@@ -1,0 +1,222 @@
+
+/* Common styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+/* Main page styles */
+.books {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.book {
+    width: 23%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+}
+
+.book-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.author {
+    margin-top: 5px;
+}
+
+.actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.like-btn {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.like-btn img {
+    width: 20px;
+    height: auto;
+}
+
+.like-btn:hover img {
+    filter: brightness(150%); 
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+.video {
+    margin-bottom: 10px;
+}
+
+.video-title {
+    text-align: right; 
+}
+
+/* Person page styles */
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.or-text {
+    margin: 0 10px;
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.signup-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-btn:active, .signup-btn:active {
+    transform: translateY(1px);
+}
+
+/* Signup page styles */
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+}
+
+.signup-btn:active {
+    transform: translateY(1px);
+}
+
+/* Shopping cart page styles */
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.book-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.book-info img {
+    max-width: 80px; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.book-details {
+    flex: 1;
+}
+.quantity {
+    width: 50px; 
+    text-align: center;
+}
+.subtotal {
+    font-weight: bold;
+}
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    margin-top: 20px;
+}
+
+.proceed-to-checkout {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.proceed-to-checkout:hover {
+    background-color: #0056b3;
+}

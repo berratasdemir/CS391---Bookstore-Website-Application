@@ -1,78 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <style>
-header {
-    background-color: #f8f9fa;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10 px 20px;
-}
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    flex-grow: 1; 
-    margin: 0 20px; 
-}
-
-.search-bar input[type="text"] {
-    padding: 10px;
-    width: 60%;
-}
-
-.icons {
-    display: flex;
-    align-items: center;
-}
-
-.icons a {
-    margin-left: 20px; 
-}
-
-.icons img {
-    width: 30px; /* Adjust as needed */
-    margin-left: 10px; /* Adjust as needed */
-    margin-right: 10px;
-}
-
-
-.divider {
-    height: 50px; 
-    width: 1px;
-    background-color: #ccc;
-    margin: 0 20px; 
-}
-
-button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #eee;
-}
-button:active {
-    transform: translateY(1px);
-}
-a {
-    text-decoration: none;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css"> 
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="main.html">
-                <img src="bookstorelogo.png" alt="Logo" style="width:50%;">
+                <img src="pictures/bookstorelogo.png" alt="Logo" style="width:50%;">
             </a>
         </div>
         <div class="divider"></div>
@@ -81,15 +19,48 @@ a {
         </div>
         <div class="icons">
             <a href="favorites.html">
-                <img src="heart_unfill.png" alt="Logo 1" style="width: 30px;">
+                <img src="pictures/heart_unfill.png" alt="Logo 1" style="width: 30px;">
             </a>
             <a href="person.html">
-                <img src="person.png" alt="Logo 2" style="width: 30px;">
+                <img src="pictures/person.png" alt="Logo 2" style="width: 30px;">
             </a>
             <a href="shopping-cart.html">
-                <img src="shopping-cart.png" alt="Logo 3" style="width: 30px;">
+                <img src="pictures/shopping-cart.png" alt="Logo 3" style="width: 30px;">
             </a>
         </div>
     </header>
 </body>
-</html></div>
+
+<head>
+    <title>Favorites</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <body>
+        <h2>Favorites</h2>
+        
+        <div class="cart-container">
+            <div class="cart-item">
+                <div class="book-info">
+                    <img src="pictures/cesur-yeni-dünya.jpeg" alt="Book Image" class="book-image">
+                    <div class="book-details">
+                        <p class="book-title">Cesur Yeni Dünya</p>
+                        <p class="author">Aldous Huxley</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="cart-item">
+                <div class="book-info">
+                    <img src="pictures/otomatik portakal.jpeg" alt="Book Image" class="book-image">
+                    <div class="book-details">
+                        <p class="book-title">Otomatik Portakal</p>
+                        <p class="author">Anthony Burgess</p>
+                    </div>
+                </div>
+            </div>
+        
+            
+        </div>
+    </body>
+</html>
+

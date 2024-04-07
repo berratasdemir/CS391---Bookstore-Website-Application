@@ -1,78 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <style>
-header {
-    background-color: #f8f9fa;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10 px 20px;
-}
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    flex-grow: 1; 
-    margin: 0 20px; 
-}
-
-.search-bar input[type="text"] {
-    padding: 10px;
-    width: 60%;
-}
-
-.icons {
-    display: flex;
-    align-items: center;
-}
-
-.icons a {
-    margin-left: 20px; 
-}
-
-.icons img {
-    width: 30px; /* Adjust as needed */
-    margin-left: 10px; /* Adjust as needed */
-    margin-right: 10px;
-}
-
-
-.divider {
-    height: 50px; 
-    width: 1px;
-    background-color: #ccc;
-    margin: 0 20px; 
-}
-
-button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #eee;
-}
-button:active {
-    transform: translateY(1px);
-}
-a {
-    text-decoration: none;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css"> 
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="main.html">
-                <img src="bookstorelogo.png" alt="Logo" style="width:50%;">
+                <img src="pictures/bookstorelogo.png" alt="Logo" style="width:50%;">
             </a>
         </div>
         <div class="divider"></div>
@@ -81,15 +19,95 @@ a {
         </div>
         <div class="icons">
             <a href="favorites.html">
-                <img src="heart_unfill.png" alt="Logo 1" style="width: 30px;">
+                <img src="pictures/heart_unfill.png" alt="Logo 1" style="width: 30px;">
             </a>
             <a href="person.html">
-                <img src="person.png" alt="Logo 2" style="width: 30px;">
+                <img src="pictures/person.png" alt="Logo 2" style="width: 30px;">
             </a>
             <a href="shopping-cart.html">
-                <img src="shopping-cart.png" alt="Logo 3" style="width: 30px;">
+                <img src="pictures/shopping-cart.png" alt="Logo 3" style="width: 30px;">
             </a>
         </div>
     </header>
+
+<head>
+    <title>Best Sellers</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <script src="cart.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="section-title">Best Sellers</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="pictures/1984-geroge-orwell.png" alt="Book 1" >
+                    <p class="book-title">1984</p>
+                    <p class="author">George Orwell</p>
+                    <div class="actions">
+                        <button class="like-btn">
+                            <img src="pictures/heart_unfill.png" alt="Like Icon"> 
+                        </button>
+                        <button class="add-to-cart" onclick="addToCart('1984', 'George Orwell','1984-geroge-orwell.png')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="pictures/hayvan-çiftliği.jpeg" alt="Book 2" >
+                    <p class="book-title">Hayvan Çifliği</p>
+                    <p class="author">George Orwell</p>
+                    <div class="actions">
+                        <button class="like-btn">
+                            <img src="pictures/heart_unfill.png" alt="Like Icon"> 
+                        </button>
+                        <button class="add-to-cart" onclick="addToCart('Hayvan Çifliği','George Orwell','hayvan-çiftliği.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="pictures/otomatik portakal.jpeg" alt="Book 3" style="width: 215px";>
+                    <p class="book-title">Otomatik Portakal</p>
+                    <p class="author">Anthony Burgess</p>
+                    <div class="actions">
+                        <button class="like-btn">
+                            <img src="pictures/heart_unfill.png" alt="Like Icon">
+                        </button>
+                        <button class="add-to-cart" onclick="addToCart('Otomatik Portakal','Anthony Burgess','otomatik portakal.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="pictures/cesur-yeni-dünya.jpeg" alt="Book 4" style="width: 225px";>
+                    <p class="book-title">Cesur Yeni Dünya</p>
+                    <p class="author">Aldous Huxley</p>
+                    <div class="actions">
+                        <button class="like-btn">
+                            <img src="pictures/heart_unfill.png" alt="Like Icon"> 
+                        </button>
+                        <button class="add-to-cart" onclick="addToCart('Cesur Yeni Dünya','Aldous Huxley','cesur-yeni-dünya.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="pictures/açlık-oyunları.jpeg" alt="Book 4">
+                    <p class="book-title">Açlık Oyunları</p>
+                    <p class="author">Suzanne Colins</p>
+                    <div class="actions">
+                        <button class="like-btn">
+                            <img src="pictures/heart_unfill.png" alt="Like Icon"> 
+                        </button>
+                        <button class="add-to-cart" onclick="addToCart('Açlık Oyunları','Suzanne Colins','açlık-oyunları.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="video-container">
+                <div class="video">
+                <iframe width="320" height="200" src="https://www.youtube.com/embed/UmSL2s0uDcg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>   
+                    
+                <div class="video-title">
+                    <h2>5 Books You Must Read 
+                        Before You Die</h2>                
+                </div>           
+            </div>
+        </div>   
+        
+        
+        
 </body>
 </html></div>
